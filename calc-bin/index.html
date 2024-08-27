@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💻</title>
+    <link rel="stylesheet" href="../calc-bin/style.css" />
+</head>
+<body>
+    <div class="gradient-bg">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                    <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+            </defs>
+        </svg>
+        <h1 class="title">Operações com Binários</h1>
+        <div class="container">
+            <div class="form-container">
+                <form autocomplete="off" class="box-login">
+                    <h2>Soma de Binários</h2>
+                    <input type="text" id="input-binario1" placeholder="Digite o primeiro número" />
+                    <input type="text" id="input-binario2" placeholder="Digite o segundo número" />
+                    <input type="button" value="Somar" onclick="calcular('soma')" id="btn-converter" />
+                    <input type="button" value="Limpar" onclick="limpar('soma')" id="btn-limpar" />
+                    <input type="text" id="resultado-soma" readonly placeholder="Resultado" />
+                </form>
+            </div>
+            <div class="form-container">
+                <form autocomplete="off" class="box-login2">
+                    <h2>Multiplicação de Binários</h2>
+                    <input type="text" id="input-binario3" placeholder="Digite o primeiro número" />
+                    <input type="text" id="input-binario4" placeholder="Digite o segundo número" />
+                    <input type="button" value="Multiplicar" onclick="calcular('multiplicacao')" id="btn-converter-trip" />
+                    <input type="button" value="Limpar" onclick="limpar('multiplicacao')" id="btn-limpar-trip" />
+                    <input type="text" id="resultado-multiplicacao" readonly placeholder="Resultado" />
+                </form>
+            </div>
+        </div>
+        <div class="gradients-container">
+            <div class="g1"></div>
+            <div class="g2"></div>
+            <div class="g3"></div>
+            <div class="g4"></div>
+            <div class="g5"></div>
+            <div class="interactive"></div>
+        </div>
+    </div>
+    <script src="../calc-bin/main.js"></script>ip
+</body>
+</html>
